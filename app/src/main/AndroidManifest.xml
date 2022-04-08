@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicativoContribua">
         <activity
+            android:name=".ui.donate.DonateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.HomeActivity"
             android:exported="true">
             <intent-filter>
