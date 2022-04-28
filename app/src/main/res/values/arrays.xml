@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_area1" />
+    <string-array name="list_area2" />
+    <string-array name="list_area3" />
+    <string-array name="list_area4" />
+    <string-array name="list_area5" />
+    <string-array name="list_area6" />
+    <string-array name="list_area7" />
+    <string-array name="list_area8" />
+    <string-array name="list_area9" />
+    <string-array name="list_area10" />
+
+    <string-array name="list_area11">
+        <item>Tiúma 1</item>
+        <item>Tiúma 2</item>
+        <item>Tiúma 3</item>
+        <item>Tiúma 4</item>
+    </string-array>
+
+    <string-array name="list_area12">
+        <item>Nova Tiúma 1</item>
+        <item>Nova Tiúma 2</item>
+        <item>Nova Tiúma 3</item>
+        <item>Nova Tiúma 4</item>
+        <item>Nova Tiúma 5</item>
+    </string-array>
+
+    <string-array name="list_area">
+        <item>Área 1</item>
+        <item>Área 2</item>
+        <item>Área 3</item>
+        <item>Área 4</item>
+        <item>Área 5</item>
+        <item>Área 6</item>
+        <item>Área 7</item>
+        <item>Área 8</item>
+        <item>Área 9</item>
+        <item>Área 10</item>
+        <item>Área 11</item>
+        <item>Área 12</item>
+    </string-array>
+
+    <string-array name="list_empty" />
+    <string-array name="district_list_tiuma1">
+        <item>Alysson Ribeiro</item>
+        <item>Lidiane Pereira</item>
+    </string-array>
+</resources>
