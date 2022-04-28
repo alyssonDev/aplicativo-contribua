@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Aplicativo Contribua</string>
+    <string name="app_name">Contribua</string>
+    <string name="contribute_description_for_splash">Contribua com alegria para a obra missionária.</string>
+    <string name="title_for_splash">Contribua</string>
+    <string name="txv_select_area_congregation">Selecione abaixo a área da sua congregação</string>
+    <string name="txv_select_congregation">Selecione a sua congregação</string>
+    <string name="txv_list_district_attorney">Qual dos promotores abaixo está fazendo a coleta?</string>
+    <string name="txv_description_home">Para prosseguir com a coleta de contribuição, por favor prossiga com a seleção do item abaixo.</string>
+    <string name="button_name_contribuation">Prosseguir para contribuição.</string>
+    <string name="select">Selecione</string>
 </resources>
