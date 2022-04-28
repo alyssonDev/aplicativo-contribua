@@ -1,121 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:padding="@dimen/padding_10dp"
     tools:context=".ui.information.InformationActivity">
 
-
-    <TextView
-        android:id="@+id/txv_description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_16dp"
-        android:layout_marginTop="@dimen/margin_16dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:text="@string/txv_description_information"
-        android:textColor="@color/black"
-        android:textSize="@dimen/size_18sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sppinner_select_area"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:layout_marginTop="@dimen/margin_36dp"
-        android:hint="@string/txv_input_select_area"
-        app:hintAnimationEnabled="true"
-        app:hintTextColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/txv_description"
-        app:layout_constraintStart_toStartOf="@+id/txv_description"
-        app:layout_constraintTop_toBottomOf="@+id/txv_description"
-        app:startIconDrawable="@drawable/ic_select_area">
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_10dp">
 
-        <AutoCompleteTextView
-            android:id="@+id/autocomplete_select_area"
+
+        <TextView
+            android:id="@+id/txv_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/txv_description_information"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_18sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sppinner_select_area"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            android:paddingTop="@dimen/margin_16dp"
-            android:paddingBottom="@dimen/size_16dp"
-            android:text="@string/txv_hint_select_area"
-            android:textColor="@color/black"
-            android:textStyle="italic"
-            tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginHorizontal="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_36dp"
+            android:hint="@string/txv_input_select_area"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/txv_description"
+            app:layout_constraintStart_toStartOf="@+id/txv_description"
+            app:layout_constraintTop_toBottomOf="@+id/txv_description"
+            app:startIconDrawable="@drawable/ic_select_area">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sppinner_select_congregation"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:layout_marginTop="@dimen/margin_36dp"
-        android:hint="@string/txv_input_hint_congregation"
-        app:layout_constraintEnd_toEndOf="@+id/sppinner_select_area"
-        app:layout_constraintStart_toStartOf="@+id/sppinner_select_area"
-        app:layout_constraintTop_toBottomOf="@+id/sppinner_select_area"
-        app:startIconDrawable="@drawable/ic_select_congregation">
+            <AutoCompleteTextView
+                android:id="@+id/autocomplete_select_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="@dimen/margin_16dp"
+                android:paddingBottom="@dimen/size_16dp"
+                android:text="@string/txv_hint_select_area"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <AutoCompleteTextView
-            android:id="@+id/autocomplete_select_congregation"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sppinner_select_congregation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            android:paddingTop="@dimen/margin_16dp"
-            android:paddingBottom="@dimen/size_16dp"
-            android:text="@string/txv_hint_congregation"
-            android:textColor="@color/black"
-            android:textStyle="italic"
-            tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginHorizontal="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_36dp"
+            android:hint="@string/txv_input_hint_congregation"
+            app:layout_constraintEnd_toEndOf="@+id/sppinner_select_area"
+            app:layout_constraintStart_toStartOf="@+id/sppinner_select_area"
+            app:layout_constraintTop_toBottomOf="@+id/sppinner_select_area"
+            app:startIconDrawable="@drawable/ic_select_congregation">
+
+            <AutoCompleteTextView
+                android:id="@+id/autocomplete_select_congregation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="@dimen/margin_16dp"
+                android:paddingBottom="@dimen/size_16dp"
+                android:text="@string/txv_hint_congregation"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/sppinner_select_district"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:layout_marginTop="@dimen/margin_36dp"
-        android:hint="@string/txv_hint_district"
-        app:layout_constraintEnd_toEndOf="@+id/sppinner_select_congregation"
-        app:layout_constraintStart_toStartOf="@+id/sppinner_select_congregation"
-        app:layout_constraintTop_toBottomOf="@+id/sppinner_select_congregation"
-        app:startIconDrawable="@drawable/ic_select_district">
-
-        <AutoCompleteTextView
-            android:id="@+id/autocomplete_select_district"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/sppinner_select_district"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"
-            android:paddingTop="@dimen/margin_16dp"
-            android:paddingBottom="@dimen/size_16dp"
-            android:text="@string/txv_select_distinc_text"
+            android:layout_marginHorizontal="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_36dp"
+            android:hint="@string/txv_hint_district"
+            app:layout_constraintEnd_toEndOf="@+id/sppinner_select_congregation"
+            app:layout_constraintStart_toStartOf="@+id/sppinner_select_congregation"
+            app:layout_constraintTop_toBottomOf="@+id/sppinner_select_congregation"
+            app:startIconDrawable="@drawable/ic_select_district">
+
+            <AutoCompleteTextView
+                android:id="@+id/autocomplete_select_district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:paddingTop="@dimen/margin_16dp"
+                android:paddingBottom="@dimen/size_16dp"
+                android:text="@string/txv_select_distinc_text"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_next"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height_button_60dp"
+            android:layout_marginHorizontal="@dimen/margin_12dp"
+            android:layout_marginTop="@dimen/margin_32dp"
+            android:text="@string/button_name_contribuation"
+            android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textStyle="italic"
-            tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_next"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/height_button_60dp"
-        android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:text="@string/button_name_contribuation"
-        android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="@dimen/size_16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:textSize="@dimen/size_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.355"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sppinner_select_district"
+            app:layout_constraintVertical_bias="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
