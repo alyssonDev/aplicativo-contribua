@@ -5,7 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class InformationDistrict(
-    val congregationArea: String,
-    val congregationName: String,
-    val districtName: String
+    var congregationArea: String = "",
+    var congregationName: String = "",
+    var districtName: String = ""
 ) : Parcelable

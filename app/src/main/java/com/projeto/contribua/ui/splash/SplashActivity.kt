@@ -29,7 +29,7 @@ class SplashActivity : AppCompatActivity() {
                 startActivity(intentHome)
                 finish()
             },
-            3000
+            2010
         )
 
     }
@@ -43,7 +43,6 @@ class SplashActivity : AppCompatActivity() {
             .setSubTitleColor(R.color.black)
             .setSubTitleSize(16F)
             .setAnimation(Splashy.Animation.SLIDE_IN_LEFT_RIGHT, 2000)
-            .setInfiniteDuration(true)
             .show()
     }
 }
