@@ -24,7 +24,7 @@
         </activity>
         <activity
             android:name=".ui.information.InformationActivity"
-            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:label="@string/label_for_informationActivity"
             android:exported="true" />
     </application>
 

@@ -4,21 +4,32 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatSpinner
 import com.projeto.contribua.R
 import com.projeto.contribua.databinding.ActivityInformationBinding
 import com.projeto.contribua.extensions.getCongregationByArea
 import com.projeto.contribua.extensions.getDistrictAttorneyAtCongregationName
 
-class InformationActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
+class InformationActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
     private lateinit var binding: ActivityInformationBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.let {
+            it.setDisplayShowHomeEnabled(true)
+            it.setDisplayHomeAsUpEnabled(true)
+        }
+
         binding = ActivityInformationBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initialize()
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return super.onSupportNavigateUp()
+
     }
 
     private fun initialize() {
@@ -26,67 +37,41 @@ class InformationActivity : AppCompatActivity(), AdapterView.OnItemSelectedListe
     }
 
     private fun insertValuesInSpinnerArea() {
-        initializeSppiner(binding.sppinnerSelectArea, R.array.list_area)
+        initializeSppiner(binding.autocompleteSelectArea, R.array.list_area)
     }
 
 
     private fun populateSpinnerCongregation(areaName: String) {
-        initializeSppiner(binding.sppinnerSelectCongregation, areaName.getCongregationByArea())
+        initializeSppiner(binding.autocompleteSelectCongregation, areaName.getCongregationByArea())
     }
 
-    private fun initializeSppiner(spinnerView: AppCompatSpinner, referenceList: Int) {
+    private fun initializeSppiner(autocompleteTextView: AutoCompleteTextView, referenceList: Int) {
         ArrayAdapter.createFromResource(
             this,
             referenceList,
             R.layout.support_simple_spinner_dropdown_item
         ).also {
-            it.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item)
-            spinnerView.adapter = it
-            spinnerView.onItemSelectedListener = this
+            autocompleteTextView.setAdapter(it)
+            autocompleteTextView.onItemClickListener = this
         }
     }
 
-    override fun onNothingSelected(p0: AdapterView<*>?) {
-        p0?.visibility = View.GONE
-    }
-
-    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        when (p0?.id) {
-            binding.sppinnerSelectArea.id -> {
-                setListViewVisible(false)
-                if (p0.getItemAtPosition(p2).toString() != resources.getString(R.string.select)) {
-                    populateSpinnerCongregation(
-                        p0.getItemAtPosition(p2).toString()
-                    )
-                }
+    override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        when (p0?.adapter) {
+            binding.autocompleteSelectArea.adapter -> {
+                binding.autocompleteSelectCongregation.setText(R.string.txv_hint_congregation)
+                binding.autocompleteSelectDistrict.setText(R.string.txv_select_distinc_text)
+                populateSpinnerCongregation(p0?.getItemAtPosition(p2).toString())
             }
-            binding.sppinnerSelectCongregation.id -> {
-                if (p0.getItemAtPosition(p2)
-                        .toString() != resources.getString(R.string.txv_select_congregation)
-                ) {
-                    populateRecyclerAtCongregation(p0.getItemAtPosition(p2).toString())
-                }
+            binding.autocompleteSelectCongregation.adapter -> {
+                binding.autocompleteSelectDistrict.setText(R.string.txv_select_distinc_text)
+                initializeSppiner(
+                    binding.autocompleteSelectDistrict,
+                    p0?.getItemAtPosition(p2).toString().getDistrictAttorneyAtCongregationName()
+                )
             }
         }
-    }
 
-    private fun setListViewVisible(isVisible: Boolean) {
-        if (isVisible) {
-            binding.recyclerDistrictAttorney.visibility = View.VISIBLE
-
-        } else {
-            binding.recyclerDistrictAttorney.visibility = View.GONE
-        }
-
-    }
-
-    private fun populateRecyclerAtCongregation(congregationName: String) {
-        setListViewVisible(true)
-        binding.recyclerDistrictAttorney.adapter = ArrayAdapter(
-            this,
-            R.layout.support_simple_spinner_dropdown_item,
-            congregationName.getDistrictAttorneyAtCongregationName()
-        )
     }
 
 }

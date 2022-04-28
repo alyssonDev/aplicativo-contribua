@@ -13,111 +13,109 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_16dp"
-        android:layout_marginTop="@dimen/margin_18dp"
+        android:layout_marginTop="@dimen/margin_16dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:gravity="center_horizontal"
-        android:text="@string/txv_description_home"
-        android:textSize="@dimen/size_22sp"
-        android:textStyle="bold"
+        android:text="@string/txv_description_information"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_18sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txv_select_area_congregation"
-        style="@style/Widget.MaterialComponents.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/txv_select_area_congregation"
-        android:textSize="@dimen/size_18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txv_description" />
-
-    <androidx.appcompat.widget.AppCompatSpinner
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sppinner_select_area"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:layout_marginTop="@dimen/margin_12dp"
-        android:minHeight="@dimen/margin_48dp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/txv_select_area_congregation"
-        app:layout_constraintStart_toStartOf="@+id/txv_select_area_congregation"
-        app:layout_constraintTop_toBottomOf="@+id/txv_select_area_congregation"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:layout_marginTop="@dimen/margin_36dp"
+        android:hint="@string/txv_input_select_area"
+        app:hintAnimationEnabled="true"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/txv_description"
+        app:layout_constraintStart_toStartOf="@+id/txv_description"
+        app:layout_constraintTop_toBottomOf="@+id/txv_description"
+        app:startIconDrawable="@drawable/ic_select_area">
 
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_select_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:paddingTop="@dimen/margin_16dp"
+            android:paddingBottom="@dimen/size_16dp"
+            android:text="@string/txv_hint_select_area"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/txv_select_congregation"
-        style="@style/Widget.MaterialComponents.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_16dp"
-        android:text="@string/txv_select_congregation"
-        android:textSize="@dimen/size_18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sppinner_select_area" />
-
-
-    <androidx.appcompat.widget.AppCompatSpinner
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/sppinner_select_congregation"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:layout_marginTop="@dimen/margin_12dp"
-        android:gravity="center_horizontal"
-        android:minHeight="@dimen/margin_48dp"
-        app:layout_constraintEnd_toEndOf="@+id/txv_select_congregation"
-        app:layout_constraintStart_toStartOf="@+id/txv_select_congregation"
-        app:layout_constraintTop_toBottomOf="@+id/txv_select_congregation"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:layout_marginTop="@dimen/margin_36dp"
+        android:hint="@string/txv_input_hint_congregation"
+        app:layout_constraintEnd_toEndOf="@+id/sppinner_select_area"
+        app:layout_constraintStart_toStartOf="@+id/sppinner_select_area"
+        app:layout_constraintTop_toBottomOf="@+id/sppinner_select_area"
+        app:startIconDrawable="@drawable/ic_select_congregation">
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_select_congregation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:paddingTop="@dimen/margin_16dp"
+            android:paddingBottom="@dimen/size_16dp"
+            android:text="@string/txv_hint_congregation"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <TextView
-        android:id="@+id/txv_list_district_attorney"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_16dp"
-        android:gravity="center_horizontal"
-        android:text="@string/txv_list_district_attorney"
-        android:textSize="@dimen/size_18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sppinner_select_congregation" />
-
-    <ListView
-        android:id="@+id/recycler_district_attorney"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sppinner_select_district"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:layout_marginTop="@dimen/size_16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txv_list_district_attorney" />
+        android:layout_marginTop="@dimen/margin_36dp"
+        android:hint="@string/txv_hint_district"
+        app:layout_constraintEnd_toEndOf="@+id/sppinner_select_congregation"
+        app:layout_constraintStart_toStartOf="@+id/sppinner_select_congregation"
+        app:layout_constraintTop_toBottomOf="@+id/sppinner_select_congregation"
+        app:startIconDrawable="@drawable/ic_select_district">
+
+        <AutoCompleteTextView
+            android:id="@+id/autocomplete_select_district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:paddingTop="@dimen/margin_16dp"
+            android:paddingBottom="@dimen/size_16dp"
+            android:text="@string/txv_select_distinc_text"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_next"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/height_button_60dp"
         android:layout_marginHorizontal="@dimen/margin_12dp"
         android:text="@string/button_name_contribuation"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textSize="@dimen/size_16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group_itens_gone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:constraint_referenced_ids="btn_next,sppinner_select_congregation,txv_list_district_attorney, txv_select_congregation, recycler_district_attorney" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

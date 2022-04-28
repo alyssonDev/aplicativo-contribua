@@ -16,15 +16,15 @@ fun String.getCongregationByArea(): Int {
         "Área 10" -> R.array.list_area10
         "Área 11" -> R.array.list_area11
         "Área 12" -> R.array.list_area12
-        else -> 0
+        else -> R.array.list_empty
     }
 }
 
-fun String.getDistrictAttorneyAtCongregationName(): ArrayList<String> {
+fun String.getDistrictAttorneyAtCongregationName(): Int {
     return when (this) {
-        "Tiúma 1" -> arrayListOf("Alysson", "Lidiane")
-        "Tiúma 2" -> arrayListOf("Maria", "Bruno")
-        "Tiúma 3" -> arrayListOf("Hédipo", "Midian")
-        else -> arrayListOf()
+        "Tiúma 1" -> R.array.district_list_tiuma1
+        "Tiúma 2" -> R.array.district_list_tiuma1
+        "Tiúma 3" -> R.array.district_list_tiuma1
+        else -> R.array.list_empty
     }
 }
