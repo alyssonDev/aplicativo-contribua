@@ -12,6 +12,14 @@
     <string name="txv_input_select_area">Área da congregação</string>
     <string name="txv_select_distinc_text">Selecione o promotor</string>
     <string name="txv_input_hint_congregation">Congregação</string>
-    <string name="label_for_informationActivity">Informções do Promotor</string>
+    <string name="label_for_informationActivity">Informações do Promotor</string>
     <string name="toast_message_information_empty">Para prosseguir, é necessário marcar todas as opções.</string>
+    <string name="txv_hint_input_name_contributor">Nome do contribuinte.</string>
+    <string name="prefix_brl">R$</string>
+    <string name="edt_hint_value_contribuation">Valor da contribuição</string>
+    <string name="text_button_signature">Assinatura do contribuinte</string>
+    <string name="txv_button_finish_contribuation">Finalizar contribuição</string>
+    <string name="buton_date">Data</string>
+    <string name="label_for_donate_activity">Informações da contribuição</string>
+    <string name="message_does_not_return">Não é possível retorna. Finalize a contribuição</string>
 </resources>

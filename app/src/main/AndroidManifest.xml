@@ -11,6 +11,7 @@
         android:theme="@style/Theme.AplicativoContribua">
         <activity
             android:name=".ui.donate.DonateActivity"
+            android:label="@string/label_for_donate_activity"
             android:exported="false" />
         <activity
             android:name=".ui.splash.SplashActivity"

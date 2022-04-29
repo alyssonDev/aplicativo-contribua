@@ -6,4 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".ui.donate.DonateActivity">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_contributor"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/txv_hint_input_name_contributor"
+        android:padding="@dimen/padding_10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_name_contributor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_value"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_contributor"
+        app:prefixText="@string/prefix_brl">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edt_hint_value_contribuation"
+            android:inputType="number"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_button_69dp"
+        android:layout_marginHorizontal="@dimen/margin_12dp"
+        android:padding="@dimen/padding_10dp"
+        android:text="@string/buton_date"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/input_layout_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/input_layout_value"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_contributor"
+        app:strokeColor="@color/gray"
+        app:strokeWidth="0.99dp"
+        tools:ignore="TextContrastCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_signapure"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_button_60dp"
+        android:layout_marginHorizontal="@dimen/margin_12dp"
+        android:layout_marginTop="@dimen/margin_32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/text_button_signature"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_value" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_finish_contribuation"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_button_60dp"
+        android:layout_marginHorizontal="@dimen/margin_12dp"
+        android:text="@string/txv_button_finish_contribuation"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_signapure"
+        app:layout_constraintVertical_bias="0.97" />
 </androidx.constraintlayout.widget.ConstraintLayout>

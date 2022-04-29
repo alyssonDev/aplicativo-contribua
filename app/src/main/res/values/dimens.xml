@@ -12,4 +12,6 @@
     <dimen name="size_16dp">16dp</dimen>
     <dimen name="margin_36dp">36dp</dimen>
     <dimen name="height_button_60dp">60dp</dimen>
+    <dimen name="with_120dp">120dp</dimen>
+    <dimen name="height_button_69dp">69dp</dimen>
 </resources>
