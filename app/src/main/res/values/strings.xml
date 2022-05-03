@@ -23,4 +23,7 @@
     <string name="label_for_donate_activity">Informações da contribuição</string>
     <string name="message_does_not_return">Não é possível retorna. Finalize a contribuição</string>
     <string name="input_data_in_all_fields">Por favor, preencha todos os campos!</string>
+    <string name="clear_signature">Limpar assinatura</string>
+    <string name="save_signature">Salvar Assinatura</string>
+    <string name="texv_signature">Assinatura</string>
 </resources>

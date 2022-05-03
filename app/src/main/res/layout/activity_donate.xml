@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/txv_hint_input_name_contributor"
-        android:padding="@dimen/padding_10dp"
+        android:padding="@dimen/size_10dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -28,7 +28,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="245dp"
         android:layout_height="wrap_content"
-        android:padding="@dimen/padding_10dp"
+        android:padding="@dimen/size_10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_layout_contributor"
         app:prefixText="@string/prefix_brl">
@@ -46,9 +46,9 @@
         android:id="@+id/button_contribuation_date"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="0dp"
-        android:layout_height="@dimen/height_button_69dp"
-        android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:padding="@dimen/padding_10dp"
+        android:layout_height="@dimen/size_69dp"
+        android:layout_marginHorizontal="@dimen/size_12dp"
+        android:padding="@dimen/size_10dp"
         android:text="@string/buton_date"
         android:textAllCaps="false"
         android:textColor="@color/black"
@@ -64,9 +64,9 @@
         android:id="@+id/button_signapure"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="0dp"
-        android:layout_height="@dimen/height_button_60dp"
-        android:layout_marginHorizontal="@dimen/margin_12dp"
-        android:layout_marginTop="@dimen/margin_32dp"
+        android:layout_height="@dimen/size_60dp"
+        android:layout_marginHorizontal="@dimen/size_12dp"
+        android:layout_marginTop="@dimen/size_32dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/text_button_signature"
         android:textColor="@color/black"
@@ -75,12 +75,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_layout_value" />
 
+    <ImageView
+        android:id="@+id/image_signature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/button_finish_contribuation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_signapure"
+        tools:ignore="ContentDescription" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_finish_contribuation"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="0dp"
-        android:layout_height="@dimen/height_button_60dp"
-        android:layout_marginHorizontal="@dimen/margin_12dp"
+        android:layout_height="@dimen/size_60dp"
+        android:layout_marginHorizontal="@dimen/size_12dp"
         android:text="@string/txv_button_finish_contribuation"
         android:textAllCaps="false"
         android:textColor="@color/black"

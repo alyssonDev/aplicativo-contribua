@@ -118,7 +118,8 @@ class InformationActivity : AppCompatActivity(), AdapterView.OnItemClickListener
     private fun validateInformationObject() {
         informationDistrict?.let {
             if (it.districtName.isEmpty()) {
-                Toast.makeText(this, R.string.toast_message_information_empty, Toast.LENGTH_LONG).show()
+                Toast.makeText(this, R.string.toast_message_information_empty, Toast.LENGTH_LONG)
+                    .show()
             } else {
                 val intent = Intent(this, DonateActivity::class.java)
                 intent.putExtra(OBJECT_INFORMATIONS, informationDistrict)

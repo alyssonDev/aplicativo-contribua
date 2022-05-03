@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="size_16sp">16sp</dimen>
-    <dimen name="margin_16dp">16dp</dimen>
-    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="size_12dp">12dp</dimen>
     <dimen name="size_22sp">22sp</dimen>
-    <dimen name="margin_32dp">32dp</dimen>
+    <dimen name="size_32dp">32dp</dimen>
     <dimen name="size_18sp">18sp</dimen>
-    <dimen name="margin_18dp">18dp</dimen>
-    <dimen name="padding_10dp">10dp</dimen>
-    <dimen name="margin_48dp">48dp</dimen>
+    <dimen name="size_18dp">18dp</dimen>
+    <dimen name="size_10dp">10dp</dimen>
+    <dimen name="size_48dp">48dp</dimen>
     <dimen name="size_16dp">16dp</dimen>
-    <dimen name="margin_36dp">36dp</dimen>
-    <dimen name="height_button_60dp">60dp</dimen>
-    <dimen name="with_120dp">120dp</dimen>
-    <dimen name="height_button_69dp">69dp</dimen>
-    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="size_36dp">36dp</dimen>
+    <dimen name="size_60dp">60dp</dimen>
+    <dimen name="size_120dp">120dp</dimen>
+    <dimen name="size_69dp">69dp</dimen>
+    <dimen name="size_50dp">50dp</dimen>
     <dimen name="size_2dp">2dp</dimen>
 </resources>

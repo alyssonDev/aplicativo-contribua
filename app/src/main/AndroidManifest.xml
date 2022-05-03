@@ -10,13 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicativoContribua">
         <activity
+            android:name=".ui.donate.signature.SignatureActivity"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape" />
+        <activity
             android:name=".ui.donate.DonateActivity"
-            android:label="@string/label_for_donate_activity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/label_for_donate_activity" />
         <activity
             android:name=".ui.splash.SplashActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,8 +29,8 @@
         </activity>
         <activity
             android:name=".ui.information.InformationActivity"
-            android:label="@string/label_for_informationActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/label_for_informationActivity" />
     </application>
 
 </manifest>

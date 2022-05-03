@@ -1,15 +1,21 @@
 package com.projeto.contribua.ui.donate
 
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import com.projeto.contribua.R
 import com.projeto.contribua.databinding.ActivityDonateBinding
 import com.projeto.contribua.extensions.maskMonetary
 import com.projeto.contribua.ui.donate.signature.SignatureActivity
+import com.projeto.contribua.ui.donate.signature.SignatureActivity.Companion.SIGNATURE_EXTRA
 import com.projeto.contribua.utils.formatdateInString
 import java.util.Calendar
 
@@ -17,12 +23,41 @@ class DonateActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityDonateBinding
     private lateinit var datePickerDialog: DatePickerDialog
+    private var resultLaucher: ActivityResultLauncher<Intent>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setupBinding()
+        setupResultLauncher()
         setupViews()
         setupDatePickerDialog()
+    }
+
+    private fun setupResultLauncher() {
+        resultLaucher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+                if (result.resultCode == Activity.RESULT_OK) {
+                    val byteArray = result.data?.getByteArrayExtra(SIGNATURE_EXTRA)
+                    val bitmap = factoryBitMap(byteArray)
+                    setupImageSignature(bitmap)
+                }
+            }
+    }
+
+    private fun factoryBitMap(byteArray: ByteArray?): Bitmap? {
+        return byteArray?.let {
+            BitmapFactory.decodeByteArray(
+                byteArray, 0,
+                it.size
+            )
+        }
+    }
+
+    private fun setupImageSignature(bitmap: Bitmap?) {
+        bitmap?.let {
+            binding.imageSignature.setImageBitmap(it)
+        }
+
     }
 
     private fun setupDatePickerDialog() {
@@ -69,7 +104,7 @@ class DonateActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun startSignatureActivity() {
         val intent = Intent(this, SignatureActivity::class.java)
-        startActivity(intent)
+        resultLaucher?.launch(intent)
     }
 
     private fun validateFields() {
