@@ -22,4 +22,5 @@
     <string name="buton_date">Data</string>
     <string name="label_for_donate_activity">Informações da contribuição</string>
     <string name="message_does_not_return">Não é possível retorna. Finalize a contribuição</string>
+    <string name="input_data_in_all_fields">Por favor, preencha todos os campos!</string>
 </resources>
