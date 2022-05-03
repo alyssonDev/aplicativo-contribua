@@ -14,7 +14,7 @@
     <string name="txv_input_hint_congregation">Congregação</string>
     <string name="label_for_informationActivity">Informações do Promotor</string>
     <string name="toast_message_information_empty">Para prosseguir, é necessário marcar todas as opções.</string>
-    <string name="txv_hint_input_name_contributor">Nome do contribuinte.</string>
+    <string name="txv_hint_input_name_contributor">Nome do contribuinte</string>
     <string name="prefix_brl">R$</string>
     <string name="edt_hint_value_contribuation">Valor da contribuição</string>
     <string name="text_button_signature">Assinatura do contribuinte</string>
