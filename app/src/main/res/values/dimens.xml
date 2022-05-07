@@ -15,4 +15,6 @@
     <dimen name="size_69dp">69dp</dimen>
     <dimen name="size_50dp">50dp</dimen>
     <dimen name="size_2dp">2dp</dimen>
+    <dimen name="size_150dp">150dp</dimen>
+    <dimen name="size_5dp">5dp</dimen>
 </resources>

@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import com.projeto.contribua.R
 import com.projeto.contribua.databinding.ActivitySplashBinding
-import com.projeto.contribua.ui.information.InformationActivity
+import com.projeto.contribua.ui.home.HomeActivity
 import com.rbddevs.splashy.Splashy
 
 @SuppressLint("CustomSplashScreen")
@@ -23,13 +23,13 @@ class SplashActivity : AppCompatActivity() {
 
     private fun initialize() {
         settingSplashyLibrary()
-        val intentHome = Intent(this, InformationActivity::class.java)
+        val intentHome = Intent(this, HomeActivity::class.java)
         Handler().postDelayed(
             {
                 startActivity(intentHome)
                 finish()
             },
-            2010
+            2200
         )
 
     }
@@ -37,6 +37,7 @@ class SplashActivity : AppCompatActivity() {
     private fun settingSplashyLibrary() {
         Splashy(this)
             .setTitle(R.string.title_for_splash)
+            .setLogo(R.drawable.logo_bleia)
             .setTitleColor(R.color.black)
             .setSubTitle(R.string.contribute_description_for_splash)
             .setFullScreen(true)

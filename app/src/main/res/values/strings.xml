@@ -26,4 +26,6 @@
     <string name="clear_signature">Limpar assinatura</string>
     <string name="save_signature">Salvar Assinatura</string>
     <string name="texv_signature">Assinatura</string>
+    <string name="txv_description_home">IGREJA EVANGÉLICA ASSEMBLEIA DE DEUS EM PERNAMBUCO\n\n Seja Bem Vindo(a) ao aplicativo de Registro das Contribuições Missionárias.\n\n Para prosseguir com a Contribuição, aperte o botão abaixo.</string>
+    <string name="button_name_start_contribuation">Clique aqui para iniciar contribuição.</string>
 </resources>
